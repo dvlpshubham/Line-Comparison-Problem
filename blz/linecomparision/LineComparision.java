@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class LineComparision {
     public static void main(String[] args) {
+        //also can use try to test the selected code during execution
         Scanner sc = new Scanner(System.in);
         double x1, x2, y1, y2, x3, y3, x4, y4;
         int line1, line2;
@@ -17,7 +18,7 @@ public class LineComparision {
         y2 = sc.nextDouble();
 
         line1 = (int) Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        System.out.println("Distance of First line = " + line1);
+        System.out.println("Distance of the First line = " + line1);
 
         System.out.println("Enter x3 & y3 values of Third point");
         x3 = sc.nextDouble();
@@ -33,11 +34,11 @@ public class LineComparision {
         String str1 = Double.toString(line1);
         String str2 = Double.toString(line2);
 
-        if (str1.equals(str2) == true)
-            System.out.println("Both lines are Equal");
+        int check = str1.compareTo(str2);
+        if (check == 0)
+            System.out.println("Both the lines are Equal");
         else
-            System.out.println("Both The Lines are Not Equal");
-
+            System.out.println("Both the lines are Not equal");
     }
 
 }
